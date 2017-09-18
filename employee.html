@@ -1,0 +1,12 @@
+<table border='1'>
+    <tr >
+        <th ng-click='sortColumn("Name")' ng-class='sortClass("Name")'>Name</th>
+        <th ng-click='sortColumn("Category")' ng-class='sortClass("Category")'>Category</th>
+        <th ng-click='sortColumn("Amount")' ng-class='sortClass("Amount")'>Amount</th>
+    </tr>
+    <tr ng-repeat='friend in friends|orderBy:column:reverse'>
+        <td width='20%' align='center'>{{friend.name}}</td>
+        <td width='35%' align='center'>{{friend.category}}</td>
+        <td width='20%' align='center'>{{friend.amount}}</td>
+    </tr>
+</table>

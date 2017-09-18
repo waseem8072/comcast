@@ -1,0 +1,14 @@
+<table border='1'>
+    <tr >
+        <th ng-click='sortColumn("Name")' ng-class='sortClass("Name")'>Name</th>
+        <th ng-click='sortColumn("Category")' ng-class='sortClass("C1")'>C1</th>
+        <th ng-click='sortColumn("Amount")' ng-class='sortClass("C2")'>C2</th>
+        <th ng-click='sortColumn("Amount")' ng-class='sortClass("C3")'>C3</th>
+    </tr>
+    <tr ng-repeat='i in final | orderBy:"name"'>
+        <td>{{i.name}}</td>
+        <td>{{i.C1}}</td>
+        <td>{{i.C2}}</td>
+        <td>{{i.C3}}</td>
+    </tr>
+</table>
